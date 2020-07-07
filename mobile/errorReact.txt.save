@@ -1,0 +1,12 @@
+[Unhandled promise rejection: Error: Network Error]
+- node_modules/axios/lib/core/createError.js:15:17 in createError
+- node_modules/axios/lib/adapters/xhr.js:80:22 in handleError
+- node_modules/event-target-shim/dist/event-target-shim.js:818:39 in EventTarget.prototype.dispatchEvent
+- node_modules/react-native/Libraries/Network/XMLHttpRequest.js:574:29 in setReadyState
+- node_modules/react-native/Libraries/Network/XMLHttpRequest.js:388:25 in __didCompleteResponse
+- node_modules/react-native/Libraries/vendor/emitter/EventEmitter.js:190:12 in emit
+- node_modules/react-native/Libraries/BatchedBridge/MessageQueue.js:436:47 in __callFunction
+- node_modules/react-native/Libraries/BatchedBridge/MessageQueue.js:111:26 in __guard$argument_0
+- node_modules/react-native/Libraries/BatchedBridge/MessageQueue.js:384:10 in __guard
+- node_modules/react-native/Libraries/BatchedBridge/MessageQueue.js:110:17 in __guard$argument_0
+* [native code]:null in callFunctionReturnFlushedQueue
