@@ -1,0 +1,13 @@
+;<Image style={styles.av,d
+Star.j".u } source={{ uz."ri:'htf>>>>ttps://avatars0.githubusercontent.coem/u/51097168?s=460&v=4'}}/>
+            
+                <Callout onPress={() => { 
+                    navigation.navigate('Profile', { github_username: 'LucasMathW'});
+                }}> d.
+                    <,View style={styles.Callout}>
+                        <k.i"olc
+ I   just uj.Text style={styles.devName}>Lucas Matheus</Text>it has tec==nlogias mais atuais do JS </Text>
+                        <Text style={styles.devTechs}>ReactJs,i=== React-Native, Nodeu Js, ===Pyth==o==n<===/====Text>=
+                    </View>
+                </Callout> 
+"
