@@ -5,7 +5,7 @@ const SearchController = require("./controllers/SearchController");
 const routes = Router();
 
 routes.post("/devs", DevController.store);
-routes.get("/devs", DevController.index);
+routes.get("/devs", DevController.index); 
 routes.get("/devs/:id", DevController.show);
 routes.put("/devs/:id", DevController.update);
 routes.delete("/devs/:id", DevController.remove);

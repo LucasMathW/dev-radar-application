@@ -12,8 +12,11 @@ function Main({navigation}){
 
     const [devs, setDevs] = useState([]);
     const [currentRegion, setCurrentRegion] = useState(null);
-    const [techs, setTechs] = useState('');
-    
+    const [tech, setTechs] = useState('');
+
+    //Transforma todas as strings em minusculas!!
+    const techs = tech.toLowerCase();
+ 
     useEffect(() => { 
 
         async function loadInitialPosition(){

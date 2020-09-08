@@ -11,8 +11,7 @@ import DevForm from './components/DevForm'
 
 function App() {
     const[devs, setDevs] = useState([]);
-  
-   
+    
     useEffect(() => {
         async function reloadDevs(){
            const response = await api.get('/devs');

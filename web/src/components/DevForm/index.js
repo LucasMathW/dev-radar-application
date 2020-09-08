@@ -4,7 +4,7 @@ import './styles.css'
 function DevForm({onSubmit}){
 
     const[github_username, setGithunusername] = useState('');
-    const[techs, setTechs] = useState('');
+    const[tech, setTechs] = useState('');
     const[latitude, setLatitude] = useState('');
     const[longitude, setLongitude] = useState('');
 
@@ -30,6 +30,8 @@ function DevForm({onSubmit}){
 
     async function handleSubmit(e){
         e.preventDefault();
+
+        const techs = tech.toLowerCase();
 
         await onSubmit({
             github_username,
@@ -63,8 +65,10 @@ function DevForm({onSubmit}){
               name="techs" 
               id="techs" 
               required 
-              value={techs}
-              onChange={e => setTechs(e.target.value)}
+              value={tech}
+              onChange={   
+                e => setTechs(e.target.value)
+                } 
               />
            </div>
 
