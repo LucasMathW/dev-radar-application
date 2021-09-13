@@ -3,15 +3,24 @@ const mongoose = require('mongoose');
 const routes = require('./routes');
 const http = require("http");
 const cors = require('cors');
+const {config} = require('dotenv');
+const {join} = require('path')
+
+//Config env
+const configPath = join(__dirname, '..', './config', '.dev.env') 
+config({path : configPath})
+
+//define variables 
+const PORT = process.env.PORT
+const MONGO_URI = process.env.MONGO_URI
 
 const {setupWebsocket} = require("./websocket");
 
 const app = express(); 
 const server = http.Server(app);
-
 setupWebsocket(server);
 
-mongoose.connect('mongodb+srv://lucasonminstack:bolachamagica@cluster0-0r3ap.mongodb.net/week10?retryWrites=true&w=majority',
+mongoose.connect(MONGO_URI,
                 
   { 
     useNewUrlParser: true, 
@@ -25,10 +34,6 @@ mongoose.set('useCreateIndex', true);
 app.use(cors());
 app.use(express.json());
 app.use(routes);
-server.listen(3333);
-
-// Métodos HTTP: GET, POST, PUT, DELETE
-//Tipos de parâmentos:
-//Query Params: request.query (Filtros, ordenação, paginação)
-//Route Params: request.params (Identificar um recurso na alteração ou remoção)
-//Body: request.body (Dados para a criação ou alteração de um registro) 
+server.listen(PORT, ()=>{
+  console.log(`Server is running on PORT: ${PORT}`)
+}); 
